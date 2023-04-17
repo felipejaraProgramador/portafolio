@@ -1,0 +1,33 @@
+@import '../../../app.component.scss';
+
+.navbar{
+    background: $darkGray;
+    
+
+    .image-icon{
+        width: 50px;
+    }
+
+    .navbar-collapse{
+        margin-top: auto;
+        margin-bottom: 0px;
+
+        .navbar-nav{
+            margin-top: auto;
+            width: 100%;
+            justify-content: space-between;
+
+            .nav-link{
+                color: whitesmoke !important;
+                font-size: 20px;
+
+                &:hover{
+                    color: $orange !important;
+                }
+            }             
+        }
+    }
+
+
+  
+}

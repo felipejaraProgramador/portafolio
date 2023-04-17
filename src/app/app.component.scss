@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+
+$fontPrincipal: 'Poppins', sans-serif;
+
+$orange: #E08709;
+$darkGray: #1a1a1a;
+
+/*--------------------- MEDIAS QUERIES ---------------------*/
+$small: 576px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+$xx-large: 1400px;
+
+@mixin phone {
+    @media (max-width: #{$medium}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$medium}) {
+        @content;
+    }
+}
+@mixin notebook {
+    @media (min-width: #{$large}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$x-large}) {
+        @content;
+    }
+}
+@mixin xx-desktop {
+    @media (min-width: #{$xx-large}) {
+        @content;
+    }
+}
+
+.container-navs{
+
+    .items{
+        height: 82px;
+        background-color: $darkGray;
+    }
+
+    .modules{
+        width: 100%;
+        height: calc(100vh - 82px);
+        display: flex;
+        flex-direction: column;
+
+        @include phone(){
+            padding-top: 20px;
+        }
+        
+
+        @include tablet(){
+            justify-content: center;
+        }
+    }
+}
+

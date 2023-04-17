@@ -1,0 +1,100 @@
+@import '../../../app.component.scss';
+
+.container-home{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(#000, .8);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px whitesmoke;
+
+    @include phone{
+        padding: 50px 20px;
+        margin: auto 10px;
+    }
+
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px 100px;
+        margin: auto 100px;
+    }
+
+    .profile{
+        .info-profile{
+            font-family: $fontPrincipal;
+
+            .image-profile{
+                border: 1px solid white;
+                width: fit-content;
+                border-radius: 20px;
+                padding: 10px;
+
+                .fa-solid{
+                    font-size: 84px;
+                }
+            }
+
+            .name{
+                margin-top: 20px;
+            }
+
+            .name, .lastname{
+                font-size: 36px;
+            }
+
+            .dni{
+                font-size: 24px;
+                color: $orange;
+            }
+        }
+
+        .icons-profile{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-top: 50px;
+
+            .fa-solid{
+                font-size: 36px;
+            }
+        }
+    }
+
+    .information{
+        font-family: $fontPrincipal;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .career{
+            display: flex;
+            flex-direction: column;
+
+            .title{
+                font-size: 32px;
+            }
+            .line{
+                width: 300px;
+                height: 3px;
+                background: $orange;
+                border-radius: 10px;
+            }
+        }
+
+
+        .contact-info{
+            align-self: flex-end;
+
+            .group-info{
+                font-size: 24px;
+                margin-bottom: 5px;
+
+                .fa-solid{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}
