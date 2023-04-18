@@ -1,11 +1,21 @@
 @import '../../../app.component.scss';
 
 .navbar{
-    background: $darkGray;
-    padding: 0;
+    background: rgba($darkGray, .8);
+    padding: 10px 0;
+    height: 100%;
+
 
     .image-icon{
-        width: 100px;
+        width: 50px;
+    }
+
+    .navbar-toggler{
+        box-shadow: none;
+
+        .navbar-toggler-icon{
+            
+        }
     }
 
     .navbar-collapse{
@@ -15,14 +25,17 @@
         .navbar-nav{
             margin-top: auto;
             width: 100%;
-            justify-content: space-between;
+            justify-content: end;
+            gap: 20px;
 
             .nav-link{
-                color: whitesmoke !important;
-                font-size: 20px;
+                color: $gray !important;
+                font-size: 18px;
+                border-bottom: 1px solid transparent;
 
                 &:hover{
-                    color: $orange !important;
+                    color: white !important;
+                    border-bottom: 1px solid $orange;
                 }
             }             
         }

@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 $fontPrincipal: 'Poppins', sans-serif;
+$titleFont: 'Oswald', sans-serif;
 
 $orange: #E08709;
 $darkGray: #1a1a1a;
+$gray: #DCD7C9;
 
 /*--------------------- MEDIAS QUERIES ---------------------*/
 $small: 576px;
@@ -41,24 +44,86 @@ $xx-large: 1400px;
 .container-navs{
 
     .items{
-        height: 82px;
-        background-color: $darkGray;
+        position: sticky;
+        top: 0;
+        background: #1a1a1a;
     }
 
-    .modules{
-        width: 100%;
-        height: calc(100vh - 82px);
-        display: flex;
-        flex-direction: column;
 
-        @include phone(){
-            padding-top: 20px;
-        }
+    .home{
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-image: url('../assets/background-2.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .about{
+        background: #fff;
+        height: 100vh;
+    }
+
+    .education{
+        background: #5e5e5e;
+        height: 100vh;
+    }
+
+    // .items{
+    //     height: 82px;
+    //     background-color: $darkGray;
+    // }
+
+    // .modules{
+    //     width: 100%;
+    //     height: calc(100vh - 82px);
+    //     display: flex;
+    //     flex-direction: column;
+
+    //     @include phone(){
+    //         padding-top: 20px;
+    //     }
         
 
-        @include tablet(){
-            justify-content: center;
-        }
-    }
+    //     @include tablet(){
+    //         justify-content: center;
+    //     }
+    // }
 }
 
+
+
+
+.navbar{
+    background: rgba($darkGray, .8);
+    padding: 0;
+    height: 100%;
+
+    .image-icon{
+        width: 100px;
+    }
+
+    .navbar-collapse{
+        margin-top: auto;
+        margin-bottom: 0px;
+
+        .navbar-nav{
+            margin-top: auto;
+            width: 100%;
+            justify-content: space-between;
+
+            .nav-link{
+                color: whitesmoke !important;
+                font-size: 20px;
+
+                &:hover{
+                    color: $orange !important;
+                }
+            }             
+        }
+    }
+
+
+  
+}

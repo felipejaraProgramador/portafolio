@@ -1,0 +1,131 @@
+@import '../../../app.component.scss';
+
+.container-pe{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $fontPrincipal;
+    // color: lighten($darkGray, 20);
+    color: whitesmoke;
+
+    @include notebook{
+
+        align-items: center;
+    }
+
+    .title{
+        font-family: $titleFont;
+        font-size: 42px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 2px solid $orange;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+
+        @include phone{
+            font-size: 36px;
+            padding: 0;
+            width: 90%;
+            margin: 15px auto;
+        }
+
+        @include tablet{
+            font-size: 42px;
+            padding: 0;
+            width: 90%;
+            margin: 15px auto;
+        }
+
+        @include notebook{
+            text-align: center;
+            width: fit-content;
+            padding-right: 20px;
+            padding-left: 3px;
+            margin: 25px auto;
+        }
+    }
+
+    .formation{
+        @include phone{
+            width: 90%;
+            margin: 0 auto;
+            padding-left: 10px;
+        }
+
+        @include tablet{
+            width: 90%;
+            margin: 0 auto;
+            padding-left: 10px;
+        }
+
+        @include notebook{
+            width: fit-content;
+            padding-left: 0;
+        }
+
+        .concept{
+            font-weight: bold;
+            font-size: 22px;
+
+            @include notebook{
+                font-size: 20px;
+            }
+        }
+
+        .detail{
+
+            .instructor{
+                font-style: italic;
+            }
+
+            .date{
+                color: $orange;
+            }
+        }
+    }
+
+    .group-formation{
+        @include phone{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @include notebook{
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            grid-template-areas: 
+            ". a3 ."
+            "a1 . a2";
+            width: 90%;
+            gap: unset;
+            text-align: center;
+
+            .dwf{
+                grid-area: a1;
+            }
+            .adc{
+                grid-area: a2;
+            }
+            .adgp{
+                grid-area: a3;
+            }
+            
+        }
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            text-align: start;
+        }
+    }
+}

@@ -12,6 +12,9 @@ import { PageHomeComponent } from './page-home/page-home.component';
   imports: [
     CommonModule,
     HomeRoutingModule
+  ],
+  exports: [
+    PageHomeComponent
   ]
 })
 export class HomeModule { }

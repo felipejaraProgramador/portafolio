@@ -16,6 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutRoutingModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  exports: [
+    PageAboutComponent
   ]
 })
 export class AboutModule { }
