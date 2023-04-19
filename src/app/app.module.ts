@@ -9,6 +9,9 @@ import { CommonModule } from '@angular/common';
 import { HomeModule } from './modules/home/home.module';
 import { AboutModule } from './modules/about/about.module';
 import { EducationModule } from './modules/education/education.module';
+import { ProjectsModule } from './modules/projects/projects.module';
+import { ExperiencesModule } from './modules/experiences/experiences.module';
+import { ContactModule } from './modules/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { EducationModule } from './modules/education/education.module';
     HomeModule,
     AboutModule,
     EducationModule,
+    ProjectsModule,
+    ExperiencesModule,
+    ContactModule,
     HttpClientModule
   ],
   providers: [],

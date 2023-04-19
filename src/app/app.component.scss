@@ -70,26 +70,22 @@ $xx-large: 1400px;
         height: 100vh;
     }
 
-    // .items{
-    //     height: 82px;
-    //     background-color: $darkGray;
-    // }
+    .project{
+        background: #a37e6d;
+        height: 100vh;
+    }
 
-    // .modules{
-    //     width: 100%;
-    //     height: calc(100vh - 82px);
-    //     display: flex;
-    //     flex-direction: column;
+    .experience{
+        background: #5073bd;
+        height: 100vh;
+    }
 
-    //     @include phone(){
-    //         padding-top: 20px;
-    //     }
-        
+    .contact{
+        background: #dfdfdf;
+        height: 100vh;
+    }
 
-    //     @include tablet(){
-    //         justify-content: center;
-    //     }
-    // }
+    
 }
 
 
