@@ -12,10 +12,8 @@
 
     .navbar-toggler{
         box-shadow: none;
-
-        .navbar-toggler-icon{
-            
-        }
+        border: 1px solid $orange;
+        font-size: 26px;
     }
 
     .navbar-collapse{
