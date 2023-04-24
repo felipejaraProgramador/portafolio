@@ -111,9 +111,11 @@
                     color: white;
                     font-weight: bold;
                     transition: 0.4s ease;
+                    text-decoration: none;
+                    cursor: pointer;
 
                     &:hover {
-                        background: darken($orange, 1.5);
+                        background: darken($orange, 5);
                         color: #f5f5f5;
                     }
                 }
