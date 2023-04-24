@@ -71,25 +71,6 @@
         display: flex;
         flex-direction: column;
 
-        .button-primary{
-            font-size: 18px;
-            align-self: center;
-            margin: 10px 0;
-            padding: 5px 20px;
-            border: none;
-            border-radius: 5px;
-            background-color: $orange;
-            font-family: $fontPrincipal;
-            color: white;
-            transition: ease .5s;
-
-            &:hover{
-                box-shadow: 0px 0px 2px 2px $orange;
-                background: transparent;
-                transform: scale(1.03);
-            }
-        }
-
         .contact-info{
             display: flex;
             justify-content: center;
@@ -153,3 +134,45 @@
     }
 
 }
+
+.modal{
+    .modal-content{
+        .modal-header{
+            .modal-title{
+                color: lighten($darkGray, 20);
+                text-transform: uppercase;
+                font-family: $titleFont;
+                font-weight: bold;
+                border-bottom: 2px solid $orange;
+                padding-right: 20px;
+                padding-left: 3px;
+            }
+        }
+
+        .modal-body{
+            .cv-view{
+                width: 100%;
+                height: 1150px;
+            
+                @include phone{
+                    height: 500px;
+                }
+            }
+        }
+
+        .modal-footer{
+            .button-primary{
+                border: 1px solid $orange;
+
+                &:hover{
+                    color: lighten($darkGray, 20);
+                    box-shadow: none;
+                    border: 1px solid $orange;
+                    background: transparent;
+                    transform: none;
+                }
+            }
+        }
+    }
+}
+

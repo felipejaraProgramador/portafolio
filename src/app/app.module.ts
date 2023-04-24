@@ -34,3 +34,4 @@ import { ContactModule } from './modules/contact/contact.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

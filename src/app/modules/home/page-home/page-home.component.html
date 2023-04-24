@@ -38,15 +38,15 @@
     <div class="modal-dialog modal-dialog-scrollable modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="cvModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="cvModalLabel">Currículum Vitae</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <embed src="../../../../assets/docs/CV.pdf" type="application/pdf" width="100%" height="600px">
+                <iframe class="cv-view" src="../../../../assets/docs/CV.pdf" frameborder="0"></iframe>
+                <!-- <embed class="cv-view" src="../../../../assets/docs/CV.pdf" type="application/pdf">  -->
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="button-primary" data-bs-dismiss="modal">Cerrar CV</button>
             </div>
         </div>
     </div>
