@@ -1,5 +1,4 @@
 @import '../../../app.component.scss';
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 
 .container-home{
@@ -11,6 +10,8 @@
     height: 100%;
     gap: 10px;
     justify-content: space-around;
+    
+    font-family: $fontPrincipal;
 
     @include phone{
         justify-content: space-between;
@@ -67,6 +68,27 @@
     }
 
     .information{
+        display: flex;
+        flex-direction: column;
+
+        .button-primary{
+            font-size: 18px;
+            align-self: center;
+            margin: 10px 0;
+            padding: 5px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: $orange;
+            font-family: $fontPrincipal;
+            color: white;
+            transition: ease .5s;
+
+            &:hover{
+                box-shadow: 0px 0px 2px 2px $orange;
+                background: transparent;
+                transform: scale(1.03);
+            }
+        }
 
         .contact-info{
             display: flex;
