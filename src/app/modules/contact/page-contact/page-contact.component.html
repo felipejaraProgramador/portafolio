@@ -1,4 +1,51 @@
 <div class="container-pc">
     <h3>Contacto</h3>
-    <app-page-working></app-page-working>
+
+    <div class="buttons-group">
+        <button class="button-radio" [ngClass]="{'button-selected-radio': typeContact=='gmail', 'button-not-selected-radio': typeContact!='gmail'}" (click)="changeButtonRadio('gmail')"><i class="far fa-envelope"></i> Contacto por Gmail</button>
+        <button disabled class="button-radio" [ngClass]="{'button-selected-radio': typeContact=='whatsapp', 'button-not-selected-radio': typeContact!='whatsapp'}" (click)="changeButtonRadio('whatsapp')"><i class="fab fa-whatsapp"></i> Contacto por Whatsapp</button>
+    </div>
+
+    <form class="form-contact" [formGroup]="formContact">
+        <span class="title-form">Completa los Campos</span>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <input [ngClass]="{'input-error': !formContact.controls['name'].valid&&!formContact.controls['name'].untouched}" formControlName="name" type="text" class="form-control" id="name" placeholder=" ">
+                    <label for="name"><i *ngIf="!formContact.controls['name'].valid&&!formContact.controls['name'].untouched" class="fa-solid fa-asterisk error"></i>&nbsp;&nbsp;Nombre y Apellido:</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <input [ngClass]="{'input-error': !formContact.controls['subject'].valid&&!formContact.controls['subject'].untouched}" formControlName="subject" type="text" class="form-control" id="subject" placeholder=" ">
+                    <label for="subject"><i *ngIf="!formContact.controls['subject'].valid&&!formContact.controls['subject'].untouched" class="fa-solid fa-asterisk error"></i>&nbsp;&nbsp;Asunto:</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input [ngClass]="{'input-error': !formContact.controls['mail'].valid&&!formContact.controls['mail'].untouched}" formControlName="mail" type="email" class="form-control" id="mail" placeholder=" ">
+                    <label for="mail"><i *ngIf="!formContact.controls['mail'].valid&&!formContact.controls['mail'].untouched" class="fa-solid fa-asterisk error"></i>&nbsp;&nbsp;Correo:</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input formControlName="phone" type="number" class="form-control" id="phone" placeholder=" ">
+                    <label for="phone">Teléfono (opcional):</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                    <textarea [ngClass]="{'input-error': !formContact.controls['description'].valid&&!formContact.controls['description'].untouched}" formControlName="description" class="form-control" placeholder=" " id="description" style="height: 80px"></textarea>
+                    <label for="description"><i *ngIf="!formContact.controls['description'].valid&&!formContact.controls['description'].untouched" class="fa-solid fa-asterisk error"></i>&nbsp;&nbsp;Descripción:</label>
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button [disabled]="!formContact.valid"class="button-primary" (click)="sendMail()">Enviar</button> <!-- data-bs-toggle="modal" data-bs-target="#loading" -->
+            </div>
+        </div>
+    </form>    
 </div>
+
+
+<app-loading *ngIf="loading" [message]="messageLoading"></app-loading>

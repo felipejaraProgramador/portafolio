@@ -1,11 +1,22 @@
 @import '../../../app.component.scss';
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none !important;
+}
+
 .container-pc{
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: $fontPrincipal;
+    color: lighten($darkGray, 20);
+    min-height: 100vh;
+
+    @include phone{
+        padding: 80px 0;
+    }
 
     h3{
         text-align: center;
@@ -14,9 +25,131 @@
         text-transform: uppercase;
         font-size: 36px;
         margin-bottom: 30px;
-        color: lighten($darkGray, 20);
         border-bottom: 2px solid $orange;
         padding-right: 30px;
         padding-left: 5px;
+    }
+
+    .buttons-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @include phone{
+            width: 90%;
+        }
+
+
+        .button-radio{
+            border: 2px solid $orange;
+            border-radius: 10px;
+            padding: 7px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-size: 18px;
+
+            @include phone{
+                flex-direction: column;
+                padding: 5px 5px;
+                
+            }   
+
+            .far, .fab{
+                font-size: 28px;
+            }
+
+            &:disabled{
+                cursor: not-allowed;
+            }
+        }
+
+        .button-selected-radio{
+            background-color: $orange;
+            color: whitesmoke;
+        }
+
+        .button-not-selected-radio{
+            background-color: whitesmoke;
+            color: $orange;
+        }
+    }
+
+    .form-contact{
+        width: 70%;
+        margin-top: 20px;
+        background: rgba(#000, 0.5);
+        padding: 10px 20px;
+        border-radius: 10px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include phone{
+            width: 90%;
+        }
+
+        @include notebook{
+            width: 60%;
+        }
+
+        .title-form{
+            color: whitesmoke;
+            font-size: 26px;
+        }
+
+        .form-floating{
+            transition: .3s ease all;
+
+            .form-control{
+                border: none;
+                border-radius: unset;
+                background-color: transparent;
+                border-bottom: 2px solid $gray;
+                color: rgb(235, 235, 235);
+
+                &:focus{
+                    box-shadow: none;
+                    border-bottom: 2px solid orange;
+                    color: white;
+                }
+
+                &.input-error{
+                    border-bottom: 2px solid $red;
+                }
+
+            }
+
+            label{
+                color: whitesmoke;
+
+                .error{
+                    color: $red;
+                }
+            }
+        }
+
+        .button-primary{
+            margin: 0;
+            width: 30%;
+
+            @include phone{
+                width: 200px;
+            }
+
+            &:hover{
+                background: rgba($orange, 0.8) !important;
+                box-shadow: unset !important;
+            }
+
+            &:disabled{
+                background: rgba($orange, 0.5);
+                // pointer-events: none;
+                cursor: not-allowed;
+            }
+        }
+
     }
 }
