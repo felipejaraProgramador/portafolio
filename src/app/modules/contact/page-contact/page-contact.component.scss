@@ -147,7 +147,12 @@ input[type=number]::-webkit-outer-spin-button{
             &:disabled{
                 background: rgba($orange, 0.5);
                 // pointer-events: none;
+                transform: none;
                 cursor: not-allowed;
+
+                &:hover{
+                    background: rgba($orange, 0.5) !important;
+                }
             }
         }
 
