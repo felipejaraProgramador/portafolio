@@ -21,7 +21,7 @@ export class PageContactComponent implements OnInit {
   formContact: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
     subject: new FormControl('', [Validators.required]),
-    mail: new FormControl('', [Validators.required]),
+    mail: new FormControl('', [Validators.required, Validators.email]),
     phone: new FormControl('', []),
     description: new FormControl('', [Validators.required]),
   })
@@ -55,6 +55,7 @@ export class PageContactComponent implements OnInit {
     const x: ResponseApi | any = await this.mailService.postMail(mail);
 
     if(await x.code == 200){
+      this.formContact.reset();
       this.alertSucces(x.message);
     }else{
       this.alertError(x.message);
