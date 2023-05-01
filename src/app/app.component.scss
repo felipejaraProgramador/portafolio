@@ -48,7 +48,7 @@ $xx-large: 1400px;
         position: sticky;
         top: 0;
         background: #1a1a1a;
-        z-index: 5;
+        z-index: 1;
     }
 
 
@@ -60,19 +60,19 @@ $xx-large: 1400px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        z-index: 1;
+        z-index: 0;
     }
 
     .about{
         background: #fff;
         min-height: 100vh;
+        z-index: 0;
     }
-    z-index: 1;
 
     .education{
         background: #5e5e5e;
         height: 100vh;
-        z-index: 1;
+        z-index: 0;
     }
 
     .project{
@@ -84,13 +84,13 @@ $xx-large: 1400px;
     .experience{
         background: #5073bd;
         height: 100vh;
-        z-index: 1;
+        z-index: 0;
     }
 
     .contact{
         background: #dfdfdf;
         min-height: 100vh;
-        z-index: 1;
+        z-index: 0;
     }
 
     

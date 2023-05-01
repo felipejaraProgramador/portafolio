@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-page-home',
-  templateUrl: './page-home.component.html',
-  styleUrls: ['./page-home.component.scss']
+  selector: 'app-view-cv',
+  templateUrl: './view-cv.component.html',
+  styleUrls: ['./view-cv.component.scss']
 })
-export class PageHomeComponent implements OnInit {
+export class ViewCVComponent implements OnInit {
 
   @Output() showCV = new EventEmitter<boolean>();
 
@@ -15,7 +15,7 @@ export class PageHomeComponent implements OnInit {
   }
 
   sendStatusShowCV(){
-    this.showCV.emit(true);
+    this.showCV.emit(false);
   }
 
 }

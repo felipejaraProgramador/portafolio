@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'portafolio';
 
+  showCV: boolean = false;
+
+
+  statusShowCV(status: boolean){
+    this.showCV = status;
+  }
+
 }

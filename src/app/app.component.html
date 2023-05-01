@@ -1,7 +1,7 @@
 <div class="container-navs">
 
   <header id="fj" class="home">
-    <app-page-home></app-page-home>
+    <app-page-home (showCV)="statusShowCV($event)"></app-page-home>
   </header>
 
   <nav class="items"> 
@@ -23,6 +23,8 @@
   <section id="contact" class="contact">
     <app-page-contact></app-page-contact>
   </section> 
+
+  <app-view-cv *ngIf="showCV" (showCV)="statusShowCV($event)"></app-view-cv>
 
 </div>
 

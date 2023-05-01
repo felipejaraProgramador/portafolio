@@ -4,6 +4,7 @@ import { NavComponent } from './nav/nav/nav.component';
 import { RouterModule } from '@angular/router';
 import { PageWorkingComponent } from './page-working/page-working.component';
 import { LoadingComponent } from './loading/loading/loading.component';
+import { ViewCVComponent } from './view-CV/view-cv/view-cv.component';
 
 
 
@@ -11,7 +12,8 @@ import { LoadingComponent } from './loading/loading/loading.component';
   declarations: [
     NavComponent,
     PageWorkingComponent,
-    LoadingComponent
+    LoadingComponent,
+    ViewCVComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { LoadingComponent } from './loading/loading/loading.component';
   exports: [
     NavComponent,
     PageWorkingComponent,
-    LoadingComponent
+    LoadingComponent,
+    ViewCVComponent
   ]
 })
 export class SharedModule { }
